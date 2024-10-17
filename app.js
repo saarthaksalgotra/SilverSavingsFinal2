@@ -18,8 +18,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res) => res.send("HELLO")); 
-
 app.post('/register', async (req, res) => {
     const { email, password } = req.body; 
     const user = new User({ email, password }); 
